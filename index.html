@@ -64,6 +64,41 @@
                 <use href="./images/icons.svg#icon-close-black-18dp-2-1"></use>
               </svg>
             </button>
+            <form action="">
+              <b class="modal-title"
+                >Leave your contacts and we will call you back</b
+              >
+              <label class="fields">
+                <span class="form-label">Name</span>
+                <input type="text" class="form-input" />
+              </label>
+              <label class="fields">
+                <span class="form-label">Phone</span>
+                <input type="tel" class="form-input" />
+              </label>
+              <label class="fields">
+                <span class="form-label">Email</span>
+                <input type="email" class="form-input" />
+              </label>
+              <label class="fields">
+                <span class="form-label">Comment</span>
+                <textarea
+                  name="Comment"
+                  cols="30"
+                  rows="10"
+                  placeholder="Text input"
+                  class="form-textarea"
+                ></textarea>
+              </label>
+              <label class="fields">
+                <input type="checkbox" name="agree" class="checkbox-input" />
+                <span class="privacy"
+                  >I accept the terms and conditions of the
+                  <a href="">Privacy Policy</a></span
+                >
+              </label>
+              <button type="submit" class="button-index">Send</button>
+            </form>
           </div>
         </div>
       </section>
@@ -423,6 +458,13 @@
             </li>
           </ul>
         </div>
+        <form class="subscribe-footer">
+          <b class="modal-title footer">Subscribe</b>
+          <label>
+            <input type="email" class="input-footer" placeholder="E-mail" />
+            <button type="submit" class="btn-footer">Subscribe</button>
+          </label>
+        </form>
       </div>
     </footer>
     <script src="./js/modal.js"></script>
