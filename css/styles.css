@@ -297,6 +297,10 @@ transform: translate(-50%, -50%) scale(1.2);
     font-size: 12px;
     letter-spacing: 0.04em;
 }
+.fields .form-textarea:hover,
+.fields .form-textarea:focus{
+border-color: var(--btn-color);
+}
 .form-label {
 position: absolute;
 left: 0;
@@ -304,6 +308,20 @@ top: -20px;
 color: var(--label-color);
 font-size: 12px;
 letter-spacing: 0.04em;
+}
+.fields .form-input:focus,
+.fields .form-input:hover{
+    border-color: var(--btn-color);
+}
+.form-input:focus ~ .form-icon,
+.form-input:hover ~ .form-icon{
+    fill: var(--btn-color);
+}
+.fields .form-icon{
+position: absolute;
+left: 16px;
+top: 50%;
+transform: translateY(-50%);
 }
 .privacy{
     display: block;
@@ -526,7 +544,10 @@ color: var(--btn-bacground-color);
 }
 .subscribe-footer{
     display: block;
-    margin-left: 80px;
+    margin-left: auto;
+}
+.label-footer{
+    display: flex;
 }
 .input-footer{
     width: 264px;
@@ -536,6 +557,11 @@ color: var(--btn-bacground-color);
     line-height: 2;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
+    transition: border-color 250ms var(--cubic);
+}
+.input-footer:hover,
+.input-footer:focus{
+    border-color: var(--btn-color);
 }
 .btn-footer{
     background-color: var(--btn-color);
@@ -551,17 +577,28 @@ color: var(--btn-bacground-color);
     display: inline-block;
     width: 165px;
     height: 40px;
-    padding: 8px 64px 8px 24px;
+    padding: 8px 24px 8px 24px;
     margin-left: 24px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     border: none;
     transition: background-color 250ms var(--cubic);
+    position: relative;
 }
 
 .btn-footer:hover,
 .btn-footer:focus {
     background-color: var(--active-color);
+}
+.btn-footer .btn-text{
+    display: flex;
+    align-items: start;
+}
+.btn-footer .send-icon{
+    position: absolute;
+    top: 50%;
+    right: 24px;
+    transform: translateY(-50%);
 }
 /* portfolio  */
 
