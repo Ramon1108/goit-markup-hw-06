@@ -285,6 +285,8 @@ transform: translate(-50%, -50%) scale(1.2);
     width: 360px;
     height: 40px;
     padding: 11px 38px 11px 38px;
+    outline: none;
+    transition: border-color 250ms var(--cubic);
 }
 .form-textarea {
     border: 1px solid rgba(33, 33, 33, 0.2);
@@ -296,6 +298,8 @@ transform: translate(-50%, -50%) scale(1.2);
     padding-bottom: 0;
     font-size: 12px;
     letter-spacing: 0.04em;
+    outline: none;
+    transition: border-color 250ms var(--cubic);
 }
 .fields .form-textarea:hover,
 .fields .form-textarea:focus{
@@ -322,6 +326,7 @@ position: absolute;
 left: 16px;
 top: 50%;
 transform: translateY(-50%);
+transition: fill 250ms var(--cubic);
 }
 .privacy{
     display: block;
@@ -329,7 +334,9 @@ transform: translateY(-50%);
     letter-spacing: 0.04em;
     color: var(--privacy-color-text);
     margin-left: 24px;
+    text-align: start;
 }
+
 .checkbox-input{
 /* appearance: none; */
 position: absolute;
@@ -340,6 +347,25 @@ border: 0;
 padding: 0;
 clip: rect(0 0 0 0);
 overflow: hidden;
+}
+.checkbox-icon {
+    display: block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border: 1.25px solid #2E2F42;
+    border-radius: 2px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%); 
+    transition: border-color 250ms var(--cubic), background-color 250ms var(--cubic), background-image 250ms var(--cubic);
+}
+.checkbox-input:checked + .checkbox-icon{
+    border-color: var(--active-color);
+    background-color: var(--active-color);
+    background-image: url(../images/Property\ 1=click.svg);
+    background-size: contain;
+    background-origin: border-box;    
 }
 /* sections */
 .section-title {
@@ -557,6 +583,7 @@ color: var(--btn-bacground-color);
     line-height: 2;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
+    outline: none;
     transition: border-color 250ms var(--cubic);
 }
 .input-footer:hover,
@@ -571,7 +598,6 @@ color: var(--btn-bacground-color);
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
-    /* display: flex; */
     letter-spacing: 0.04em;
     cursor: pointer;
     display: inline-block;
