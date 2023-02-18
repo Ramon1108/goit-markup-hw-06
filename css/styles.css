@@ -300,6 +300,7 @@ transform: translate(-50%, -50%) scale(1.2);
     letter-spacing: 0.04em;
     outline: none;
     transition: border-color 250ms var(--cubic);
+    resize: none;
 }
 .fields .form-textarea:hover,
 .fields .form-textarea:focus{
@@ -335,6 +336,9 @@ transition: fill 250ms var(--cubic);
     color: var(--privacy-color-text);
     margin-left: 24px;
     text-align: start;
+}
+.privacy-link{
+    color: var(--btn-color);
 }
 
 .checkbox-input{
@@ -581,6 +585,8 @@ color: var(--btn-bacground-color);
     padding: 8px 16px 8px 16px;
     font-size: 12px;
     line-height: 2;
+    color: var(--footer-text-color);
+    background-color: transparent;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
     outline: none;
@@ -616,7 +622,7 @@ color: var(--btn-bacground-color);
 .btn-footer:focus {
     background-color: var(--active-color);
 }
-.btn-footer .btn-text{
+.btn-footer {
     display: flex;
     align-items: start;
 }
